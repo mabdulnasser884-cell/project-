@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="sofa.png" type="image/x-icon">
+    <meta name="description"
+        content="We aim to provide valuable and useful information about Furni where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+    <meta name="outhor" content="Engineer Mahmoud Ebrahim">
+    <meta name="keywords" content="Html,css,JS,Coding Html and css">
+    <title>Furni</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    /* navbar */
+    .navbar-brand {
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+
+    /* home */
+    .hero {
+        padding: calc(4rem - 30px) 0 0 0;
+    }
+
+    .hero .intro-excerpt {
+        position: relative;
+        z-index: 4;
+    }
+
+    .hero h1 {
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 30px;
+    }
+
+    .hero p {
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 30px;
+    }
+
+    .hero .hero-img-wrap {
+        position: relative;
+    }
+
+    /* * */
+    img {
+        transition: all 0.2s ease;
+    }
+
+    img:hover {
+        transform: scale(0.8);
+    }
+
+    /* section 2 */
+    .why-choose-section {
+        padding: 7rem 0;
+    }
+
+    .why-choose-section .img-wrap {
+        position: relative;
+    }
+
+    .why-choose-section .img-wrap:before {
+        position: absolute;
+        content: "";
+        width: 255px;
+        height: 217px;
+        background-image: url("dots-yellow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(-40%, -40%);
+        z-index: -1;
+    }
+
+    .why-choose-section .img-wrap img {
+        border-radius: 20px;
+    }
+
+    .feature {
+        margin-bottom: 30px;
+    }
+
+    .feature .icon {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .feature .icon:before {
+        content: "";
+        width: 33px;
+        height: 33px;
+        position: absolute;
+        background: rgba(59, 93, 80, 0.2);
+        border-radius: 50%;
+        right: -8px;
+        bottom: 0;
+    }
+
+    .feature h3 {
+        font-size: 14px;
+        color: #2f2f2f;
+    }
+
+    .feature p {
+        font-size: 14px;
+        line-height: 22px;
+        color: #6a6a6a;
+    }
+
+
+    /* footer 3 */
+    .footer-section {
+        padding: 80px 0;
+        background: #ffffff;
+    }
+
+    .footer-section .relative {
+        position: relative;
+    }
+
+    .footer-section a {
+        text-decoration: none;
+        color: #2f2f2f;
+        transition: .3s all ease;
+    }
+
+    .footer-section a:hover {
+        color: rgba(47, 47, 47, 0.5);
+    }
+
+    .footer-section .subscription-form {
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 2;
+        margin-top: 100px;
+    }
+</style>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-success sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+            <!-- الروابط على الشاشات الكبيرة -->
+            <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0 d-none d-lg-flex flex-row ms-auto gap-3 me-5">
+                <li class="nav-item"><a class="nav-link active fw-bolder btn btn-outline-warning p-2 "
+                        href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="shop.html">Shop</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="cart.html "><img src="user.svg" alt="User"></a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="checkout.html"><img src="cart.svg" alt="Cart"></a>
+                </li>
+            </ul>
+            <!-- زر الثلاث شرط يظهر فقط على الشاشات الصغيرة -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- OFFCANVAS NAVBAR -->
+    <div class="offcanvas offcanvas-start bg-success" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+            <a class="navbar-brand text-light" href="index.html">Furni<span>.</span></a>
+            <!-- زر X لقفل -->
+            <button type="button" class="btn-close text-reset bg-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0  justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item text-light"><a class="nav-link active fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="index.html">Home</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="shop.html">Shop</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="about.html">About Us</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="services.html">Services</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="blog.html">Blog</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="contact.html">Contact Us</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="cart.html"><img src="user.svg" alt="User"></a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="checkout.html"><img src="cart.svg" alt="Cart"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Home -->
+    <div class="hero bg-success" style="padding-top: 20vh;">
+        <div class="container">
+            <div class="row justify-content-between">
+
+                <div class="col-12 col-ms-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="intro-excerpt">
+                        <h1>Services.</h1>
+                        <p class="mb-4 text-light">Donec vitae odio quis nisl dapibus malesuada.</p>
+                        <p>
+                            <a href="shop.html" class="btn btn-warning me-2 text-light fw-bolder fs-3 ">Shop Now</a>
+                            <a href="#" class="btn btn-outline-warning text-light fw-bolder fs-3">Explore</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-ms-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="hero-img-wrap">
+                        <img src="couch.png" class="img-fluid" alt="Hero Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="why-choose-section">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-6 col-md-6 col-lg-3 mb-4">
+                    <div class="feature">
+                        <div class="icon"><img src="truck.svg" alt="Image" class="img-fluid"> </div>
+                        <h3>Fast &amp; Free Shipping</h3>
+                        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3 mb-4">
+                    <div class="feature">
+                        <div class="icon"><img src="bag.svg" alt="Image" class="img-fluid"></div>
+                        <h3>Easy to Shop</h3>
+                        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3 mb-4">
+                    <div class="feature">
+                        <div class="icon"><img src="support.svg" alt="Image" class="img-fluid"></div>
+                        <h3>24/7 Support</h3>
+                        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.Aliquam vulputate.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3 mb-4">
+                    <div class="feature">
+                        <div class="icon"><img src="return.svg" alt="Image" class="img-fluid"></div>
+                        <h3>Hassle Free Returns</h3>
+                        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3 mb-4">
+                    <div class="feature">
+                        <div class="icon"><img src="truck.svg" alt="Image" class="img-fluid"></div>
+                        <h3>Fast &amp; Free Shipping</h3>
+                        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.Aliquam vulputate.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3 mb-4">
+                    <div class="feature">
+                        <div class="icon"><img src="bag.svg" alt="Image" class="img-fluid"></div>
+                        <h3>Easy to Shop</h3>
+                        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.Aliquam vulputate.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3 mb-4">
+                    <div class="feature">
+                        <div class="icon"><img src="support.svg" alt="Image" class="img-fluid"></div>
+                        <h3>24/7 Support</h3>
+                        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.Aliquam vulputate.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3 mb-4">
+                    <div class="feature">
+                        <div class="icon"><img src="return.svg" alt="Image" class="img-fluid"></div>
+                        <h3>Hassle Free Returns</h3>
+                        <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 2 -->
+    <div class="product-section mt-5 p-5">
+        <div class="container">
+            <div class="row">
+                <!-- Text -->
+                <div class="col-12 col-ms-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                    <h2 class="section-title fw-bolder fs-1">Crafted with excellent material.</h2>
+                    <p>Donec vitae odio quis nisl dapibus malesuada.</p>
+                    <a href="shop.html" class="btn btn-dark text-light fw-bolder fs-3">Explore</a>
+                </div>
+                <!-- Product 1 -->
+                <div class="col-12 col-ms-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                    <a class="product-item link-dark text-center nav-link" href="cart.html">
+                        <img src="product-1.png" class="img-fluid product-thumbnail" alt="Nordic Chair">
+                        <h3>Nordic Chair</h3>
+                        <strong>$50.00</strong>
+                        <span class="icon-cross">
+                            <img src="cross.svg" alt="Add">
+                        </span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <a class="product-item link-dark text-center nav-link" href="cart.html">
+                        <img src="product-2.png" class="img-fluid product-thumbnail" alt="Kruzo Aero Chair">
+                        <h3>Kruzo Aero Chair</h3>
+                        <strong>$78.00</strong>
+                        <span class="icon-cross">
+                            <img src="cross.svg" alt="Add">
+                        </span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <a class="product-item link-dark text-center nav-link" href="cart.html">
+                        <img src="product-3.png" class="img-fluid product-thumbnail" alt="Ergonomic Chair">
+                        <h3>Ergonomic Chair</h3>
+                        <strong>$43.00</strong>
+                        <span class="icon-cross">
+                            <img src="cross.svg" alt="Add">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 3 -->
+    <div class="why-choose-section">
+        <div class="container">
+            <div class="row justify-content-between">
+                <!-- Left Column -->
+                <div class="col-lg-6">
+                    <h2 class="section-title">Why Choose Us</h2>
+                    <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
+                        vulputate velit
+                        imperdiet dolor tempor tristique.</p>
+                    <div class="row my-5">
+                        <!-- Feature 1 -->
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="truck.svg" alt="Fast & Free Shipping" class="img-fluid">
+                                </div>
+                                <h3>Fast &amp; Free Shipping</h3>
+                                <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                                    Aliquam
+                                    vulputate.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="bag.svg" alt="Easy to Shop" class="img-fluid">
+                                </div>
+                                <h3>Easy to Shop</h3>
+                                <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                                    Aliquam
+                                    vulputate.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="support.svg" alt="24/7 Support" class="img-fluid">
+                                </div>
+                                <h3>24/7 Support</h3>
+                                <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                                    Aliquam
+                                    vulputate.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 4 -->
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="return.svg" alt="Hassle Free Returns" class="img-fluid">
+                                </div>
+                                <h3>Hassle Free Returns</h3>
+                                <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+                                    Aliquam
+                                    vulputate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Image -->
+                <div class="col-lg-5">
+                    <div class="img-wrap">
+                        <img src="why-choose-us-img.jpg" alt="Why Choose Us" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4 -->
+    <section id="gallery" class="py-5 bg-success text-white text-center ">
+        <div class="text-center container">
+            <h1>Testimonials</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad optio fuga ipsa, officia non, magnam incidunt
+                consequuntur sunt consequatur quae pariatur nihil tempora et veniam ullam earum atque quisquam autem?
+            </p>
+        </div>
+
+        <div class="container">
+            <div id="ga" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <img src="person-1.png" class="rounded-circle d-inline-block" width="80"
+                            alt="Maria Jones">
+                        <h5>Maria Jones</h5>
+                        <p>“Donec vitae odio quis nisl dapibus malesuada.”</p>
+
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <img src="person_2.jpg" class="rounded-circle" width="80" alt="John Smith">
+                        <h5>John Smith</h5>
+                        <p>“Aliquam vulputate velit imperdiet dolor tempor tristique.”</p>
+
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#ga" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#ga" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+
+                <div class="carousel-indictors mt-5">
+                    <button type="button" data-bs-target="#ga" data-bs-slide-to="0"
+                        class=" btn btn-outline-warning">🔵</button>
+                    <button type="button" data-bs-target="#ga" data-bs-slide-to="1"
+                        class="btn btn-outline-warning">🔵</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- section 5 -->
+    <footer class="footer-section">
+        <div class="container relative">
+            <!-- Subscription -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="subscription-form">
+                        <div class="row">
+                            <div class="col-12 col-ms-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
+                                <h2 class="text-success"> 📩 Subscribe to Newsletter</h2>
+                                <form action="#" class="row g-3">
+                                    <div class="col-auto">
+                                        <input type="text" class="form-control" placeholder="Enter your name">
+                                    </div>
+                                    <div class="col-auto">
+                                        <input type="email" class="form-control" placeholder="Enter your email">
+                                    </div>
+                                    <textarea placeholder="Message" class="form-control" style="height: 30vh;" class="form-control"></textarea>
+                                    <div class="col-auto">
+                                        <button class="btn btn-success">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-12 col-ms-12 col-md-12 col-lg-3 col-xl-3 col-xxl-3">
+                                <span class="me-1">
+                                    <img src="sofa.png" alt="Image" class="img-fluid">
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="mb-4 footer-logo-wrap">
+                        <a href="#" class="footer-logo text-success fw-bolder fs-1">Furni<span>.</span></a>
+                    </div>
+                    <p class="mb-4">
+                        Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
+                        malesuada.
+                        Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
+                    </p>
+                    <ul class="list-unstyled custom-social">
+                        <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+                        <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row links-wrap">
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Knowledge base</a></li>
+                                <li><a href="#">Live chat</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Jobs</a></li>
+                                <li><a href="#">Our team</a></li>
+                                <li><a href="#">Leadership</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-sm-6 col-md-3">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Nordic Chair</a></li>
+                                <li><a href="#">Kruzo Aero</a></li>
+                                <li><a href="#">Ergonomic Chair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top copyright">
+                <div class="row pt-4">
+                    <div class="col-lg-6">
+                        <p class="mb-2 text-center text-lg-start">
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script>
+                            . All Rights Reserved. — Designed with love by
+                            <a href="https://untree.co">Untree.co</a>
+                            Distributed By
+                            <a href="https://themewagon.com">ThemeWagon</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <ul class="list-unstyled d-inline-flex ms-auto">
+                            <li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

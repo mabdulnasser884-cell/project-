@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/sofa.png" type="image/x-icon">
+    <meta name="description"
+        content="We aim to provide valuable and useful information about Furni where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+    <meta name="outhor" content="Engineer Mahmoud Ebrahim">
+    <meta name="keywords" content="Html,css,JS,Coding Html and css">
+    <title>Furni</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    /* navbar */
+    .navbar-brand {
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+
+    /* home */
+    .hero {
+        padding: calc(4rem - 30px) 0 0 0;
+    }
+
+    .hero .intro-excerpt {
+        position: relative;
+        z-index: 4;
+    }
+
+    .hero h1 {
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 30px;
+    }
+
+    .hero p {
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 30px;
+    }
+
+    .hero .hero-img-wrap {
+        position: relative;
+    }
+
+    /* section 2 */
+    img {
+        transition: all 0.2s ease;
+    }
+
+    img:hover {
+        transform: scale(0.8);
+    }
+
+    /* section 2 */
+    .service {
+        line-height: 1.5;
+    }
+
+    .service .service-icon {
+        border-radius: 10px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+        flex: 0 0 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: #3b5d50;
+        margin-right: 20px;
+        color: #ffffff;
+    }
+
+    textarea {
+        height: auto;
+    }
+</style>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark bg-success sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+            <!-- الروابط على الشاشات الكبيرة -->
+            <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0 d-none d-lg-flex flex-row ms-auto gap-3 me-5">
+                <li class="nav-item"><a class="nav-link active fw-bolder btn btn-outline-warning p-2 "
+                        href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="shop.html">Shop</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="cart.html "><img src="user.svg" alt="User"></a></li>
+                <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning p-2  text-light"
+                        href="checkout.html"><img src="cart.svg" alt="Cart"></a>
+                </li>
+            </ul>
+            <!-- زر الثلاث شرط يظهر فقط على الشاشات الصغيرة -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- OFFCANVAS NAVBAR -->
+    <div class="offcanvas offcanvas-start bg-success" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+            <a class="navbar-brand text-light" href="index.html">Furni<span>.</span></a>
+            <!-- زر X لقفل -->
+            <button type="button" class="btn-close text-reset bg-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0  justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item text-light"><a class="nav-link active fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="index.html">Home</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="shop.html">Shop</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="about.html">About Us</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="services.html">Services</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="blog.html">Blog</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="contact.html">Contact Us</a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="cart.html"><img src="user.svg" alt="User"></a></li>
+                <li class="nav-item text-light"><a class="nav-link fw-bolder btn btn-outline-warning p-2 fs-4"
+                        href="checkout.html"><img src="cart.svg" alt="Cart"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Home -->
+    <div class="hero bg-success" style="padding-top: 20vh;">
+        <div class="container">
+            <div class="row justify-content-between">
+
+                <div class="col-12 col-ms-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="intro-excerpt">
+                        <h1>Contact Us.</h1>
+                        <p class="mb-4 text-light">Donec vitae odio quis nisl dapibus malesuada.</p>
+                        <p>
+                            <a href="shop.html" class="btn btn-warning me-2 text-light fw-bolder fs-3 ">Shop Now</a>
+                            <a href="#" class="btn btn-outline-warning text-light fw-bolder fs-3">Explore</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-ms-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="hero-img-wrap">
+                        <img src="couch.png" class="img-fluid" alt="Hero Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="untree_co-section pt-5">
+        <div class="container">
+            <div class="block">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-8 pb-4">
+                        <div class="row mb-5">
+                            <!-- Address -->
+                            <div class="col-lg-4">
+                                <div class="service no-shadow align-items-center link horizontal d-flex active"
+                                    data-aos="fade-left" data-aos-delay="0">
+                                    <div class="service-icon color-1 mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 
+6z" />
+                                        </svg>
+                                    </div>
+                                    <div class="service-contents">
+                                        <p>43 Raymouth Rd. Baltemoer, London 3910</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Email -->
+                            <div class="col-lg-4">
+                                <div class="service no-shadow align-items-center link horizontal d-flex active"
+                                    data-aos="fade-left" data-aos-delay="0">
+                                    <div class="service-icon color-1 mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 
+4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                                        </svg>
+                                    </div>
+                                    <div class="service-contents">
+                                        <p>info@yourdomain.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Phone -->
+                            <div class="col-lg-4">
+                                <div class="service no-shadow align-items-center link horizontal d-flex active"
+                                    data-aos="fade-left" data-aos-delay="0">
+                                    <div class="service-icon color-1 mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 
+2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 
+.644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-
+.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-
+.037-2.137.703-2.877L1.885.511z" />
+                                        </svg>
+                                    </div>
+                                    <div class="service-contents">
+                                        <p>+20 1120283294</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label class="text-black" for="fname">First name</label>
+                                    <input type="text" class="form-control" id="fname">
+                                </div>
+                                <div class="col-6">
+                                    <label class="text-black" for="lname">Last name</label>
+                                    <input type="text" class="form-control" id="lname">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="text-black" for="email">Email address</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="mb-5">
+                                <label class="text-black" for="message">Message</label>
+                                <textarea class="form-control" id="message" cols="30" rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-success"> Send Message </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
